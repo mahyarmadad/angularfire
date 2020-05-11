@@ -1,0 +1,34 @@
+<div class="row">
+    <div class="col-6">
+        <a routerLink="/" class="btn btn-link"><i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i> Back to
+            Dashboard</a>
+    </div>
+    <div class="col-6">
+
+    </div>
+</div>
+<div class="card">
+    <div class="card-header">
+        Edit Settings
+    </div>
+    <div class="card-body">
+        <form (submit)="onSubmit()">
+            <div class="form-group">
+                <label for="">Allow Registration</label>
+                <input type="checkbox" name="allowRegister" [checked]="seeting.allowRegister"
+                    (change)="seeting.allowRegister = !seeting.allowRegister">
+            </div>
+            <div class="form-group">
+                <label for="">Disable Balance On Add</label>
+                <input type="checkbox" name="disableBalanceOnAdd" [checked]="seeting.disableBalanceOnAdd"
+                    (change)="seeting.disableBalanceOnAdd = !seeting.disableBalanceOnAdd">
+            </div>
+            <div class="form-group">
+                <label for="">Disable Balance On Edit</label>
+                <input type="checkbox" name="disableBalanceOnEdit" [checked]="seeting.disableBalanceOnEdit"
+                    (change)="seeting.disableBalanceOnEdit = !seeting.disableBalanceOnEdit">
+            </div>
+            <input type="submit" value="Submit" class="btn btn-primary btn-block">
+        </form>
+    </div>
+</div>
